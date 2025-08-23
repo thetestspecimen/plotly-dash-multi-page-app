@@ -83,7 +83,7 @@ You would also have to get a legitimate API Key from NinjasAPI if you wanted to 
 
 Within a live environment you could change the ```DEBUG``` value to ```False```. Utilising this method has the advantage of being able to use git to update code between dev and live environments without having to change the ```DEBUG``` value every time, as this local file is not included in the git repo and is exclusive to the machine/server it is created on.
 
-## Run the project
+### Run the project
 
 To run the project just execute the following line from within the project directory:
 
