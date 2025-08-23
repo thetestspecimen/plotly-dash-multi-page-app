@@ -45,9 +45,56 @@ of folders and files:
 7. A simple example of styling using style.css
 8. Utilises DASH Mantine Components for styling
 
+## Basic usage
+
+To run the code in this repo follow the following steps:
+
+### Create your virtual environment and install packages
+
+Create your virtual environment and activate it. You can do this however you choose. For example:
+
+```bash
+cd project-folder
+python -m venv venv
+source venv/bin/activate
+```
+
+Then install the required packages:
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### Create a ".env" file
+
+The project uses ```python-dotenv``` to keep things like API Keys out of the project code by using a local file to store sensitive data, so you won't find this file included in the repo. You will need to create your own.
+
+In the root of the project folder create a file with the name: ```.env```
+
+As an example of what to include in the file, the following is what could be used in a local development environment:
+
+```python
+DEBUG = True
+NINJAS_API_KEY = "s0L889BwIkT2ThjHDROVGH==fkluRlLyGgfUUPgh"
+```
+
+You would also have to get a legitimate API Key from NinjasAPI if you wanted to use that particular API.
+
+Within a live environment you could change the ```DEBUG``` value to ```False```. Utilising this method has the advantage of being able to use git to update code between dev and live environments without having to change the ```DEBUG``` value every time, as this local file is not included in the git repo and is exclusive to the machine/server it is created on.
+
+## Run the project
+
+To run the project just execute the following line from within the project directory:
+
+```python main.py```
+
+You will then be told the local IP address that you can open in a browser to access the project front end.
+
 ## References
 
 [Plotly DASH](https://dash.plotly.com/)
+
 [DASH Mantine Components](https://www.dash-mantine-components.com/)
 
 ## License
@@ -55,7 +102,3 @@ of folders and files:
 The content of this project is licensed under the [MIT License](LICENSE.md)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z7G2C89)
-
-
-
-
