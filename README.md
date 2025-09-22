@@ -7,9 +7,9 @@ and potentially onto multiple pages.
 It therefore becomes necessary to start breaking up the single file to create a logical project 
 structure to make project management easier.
 
-However, there are limited examples available on how to acheive a structured multi-page app, and 
+However, there are limited examples available on how to achieve a structured multi-page app, and 
 there appears to be no standard "official" way to go about this. Furthermore, any examples of 
-mulipage apps present a bear-bones structure that typically doesn't include any example graphing 
+multi-page apps present a bear-bones structure that typically doesn't include any example graphing 
 etc. leaving some guesswork with regard to actually getting the app to work reliably.
 
 ## Aim
