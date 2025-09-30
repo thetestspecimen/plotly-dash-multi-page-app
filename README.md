@@ -1,49 +1,50 @@
-# Plotly DASH - Multi-Page Project Structure
+# Plotly Dash - Multi-Page Project Structure
 
-Many online examples for DASH dashboards are presented in a single file, and although this is
+Many online examples for Dash dashboards are presented in a single file, and although this is
 fine for small simple dashboards, it becomes impossible to manage as a project increases in size,
 and potentially onto multiple pages.
 
-It therefore becomes necessary to start breaking up the single file to create a logical project 
+It therefore becomes necessary to start breaking up the single file to create a logical project
 structure to make project management easier.
 
-However, there are limited examples available on how to achieve a structured multi-page app, and 
-there appears to be no standard "official" way to go about this. Furthermore, any examples of 
-multi-page apps present a bear-bones structure that typically doesn't include any example graphing 
-etc. leaving some guesswork with regard to actually getting the app to work reliably.
+However, there are limited examples available on how to achieve a structured multi-page app, and
+there appears to be no standard "official" way to go about this.
+
+Furthermore, any examples of multi-page apps present a bear-bones structure that typically doesn't
+include any example graphing etc. leaving some guesswork with regard to actually getting the app to work reliably.
 
 ## Aim
 
-With the above in mind, this repo is primarily concerned with three items in relation to creating
-a DASH dashboard:
+With the above in mind, this repo is primarily concerned with four items in relation to creating a Dash dashboard:
 
 1. Multi-page
-2. Logical project structure (i.e. not all in one file)
-3. Fully functional with data and graphing
+2. Logical project structure (i.e. not all in one file, and with a multi-folder structure)
+3. Fully functional including data (API) and graphing (Plotly)
+4. Git ready
 
 ## Other features
 
-As mentioned above, a lot of examples are limited in terms of what they include. They typically 
-only provide information on the EXACT thing they are referring to rather than having 
-a fully functional example with data etc.
+As mentioned above, a lot of examples are limited in terms of what they include. They typically
+only provide information on the EXACT thing they are referring to rather than having
+a fully functional example with data.
 
-Although, this is understandable to a certain extent, as too much information can be confusing, 
+Although, this is understandable to a certain extent, as too much information can be confusing,
 sometimes it can leave the user with a lot to figure out later down the line.
 
 This repo therefore provides a fully functional base that the user can run, and experiment with,
-straight away, and therefore use a reference point to develop their owen project from.
+straight away, and therefore use a reference point to develop their own project from.
 
 This repo includes the following, in addition to being multipage and featuring a logical structure
 of folders and files:
 
-1. A sidebar which lists the available pages, and highlights which one is active as you change page
+1. A sidebar which lists the available pages, and highlights which page is active as you change page
 2. A header with website name, logo and dark/light theme switch
-3. Mobile ready (i.e. responsive layout) with collapsible sidebar
-4. Dark/light theme switching, including the Plotly graphs that are included
-5. Two different API integrations, one local (Plotly Gapminder), and one remote with logic for API keys etc. (NinjasAPI) 
+3. Mobile ready responsive layout with collapsible sidebar
+4. Dark/light theme switching, including dark light theming of the Plotly graphs
+5. Two different API integrations, one local (Plotly Gapminder), and one remote with logic for API keys (NinjasAPI)
 6. Git ready, with logic to keep API keys out of the code, and auto DEBUG/production mode (python-dotenv)
-7. A simple example of styling using style.css
-8. Utilises DASH Mantine Components for styling
+7. A simple example of bespoke styling using style.css
+8. Utilises DASH Mantine Components for general styling providing a consistent theme
 
 ## Basic usage
 
@@ -79,7 +80,7 @@ DEBUG = True
 NINJAS_API_KEY = "s0L889BwIkT2ThjHDROVGH==fkluRlLyGgfUUPgh"
 ```
 
-You would also have to get a legitimate API Key from NinjasAPI if you wanted to use that particular API.
+The default data API used in this repository is the Gapminder API included with the libraries for Plotly. If you wish to use the API Ninjas API you will need to get your own API key (A free limited use API Key can be acquired for free from their website). The API key then needs to be included in the ```.env``` file (as shown above). Finally, set the ```EXTERNAL_API``` flag in ```utils/consts.py``` to ```True```.
 
 Within a live environment you could change the ```DEBUG``` value to ```False```. Utilising this method has the advantage of being able to use git to update code between dev and live environments without having to change the ```DEBUG``` value every time, as this local file is not included in the git repo and is exclusive to the machine/server it is created on.
 
